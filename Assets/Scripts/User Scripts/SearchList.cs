@@ -1,9 +1,11 @@
 using Newtonsoft.Json;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Text;
 using TMPro;
 using UnityEngine;
 
@@ -45,7 +47,8 @@ namespace Chess
         public List<GameObject> Users = new List<GameObject>();
         public GameObject UserModel;
         public TMP_InputField inputField;
-       
+        Root jsonobj;
+        HttpWebRequest webRequestMain;
         public Vector3 spawnPoint;
         public float Gap;
         // Start is called before the first frame update
@@ -59,7 +62,7 @@ namespace Chess
         {
 
         }
-
+    
         public void RemoveFromList(int hashcode)
         {
             var itemToRemove = Users.Single(r => r.GetHashCode() == hashcode);
@@ -80,38 +83,43 @@ namespace Chess
 
 
         }
+        public async void TestGet()
+        {
+            var url = "https://api.github.com/search/users?q=MasterKiller1239&page=1";
 
+            var httpClient = new HappyHttpClient(new JsonSerializationOption());
+
+            var result = await httpClient.Get<Root>(url);
+            Debug.Log(result.items.Count);
+        }
         public void FillList()
         {
+  
             //https://api.github.com/search/users?q=Master&page=1
-
-            HttpWebRequest webRequest = System.Net.WebRequest.Create("https://api.github.com/search/users?q=" + inputField.text + "&page=1") as HttpWebRequest;
-            if (webRequest != null)
+            webRequestMain = null;
+            webRequestMain = System.Net.WebRequest.Create("https://api.github.com/search/users?q=" + inputField.text + "&per_page=1&page=1") as HttpWebRequest;
+            if (webRequestMain != null)
             {
-                webRequest.Method = "GET";
-                webRequest.UserAgent = "Anything";
-                webRequest.ServicePoint.Expect100Continue = false;
+                webRequestMain.Method = "GET";
+                webRequestMain.UserAgent = "Anything";
+                var username = "MasterKiller1239";
+                var password = "test";
+
+                var bytes = Encoding.UTF8.GetBytes($"{username}:{password}");
+                webRequestMain.Headers.Add("Authorization", $"Basic {Convert.ToBase64String(bytes)}");
+                webRequestMain.ServicePoint.Expect100Continue = false;
 
                 try
                 {
-                    using (StreamReader responseReader = new StreamReader(webRequest.GetResponse().GetResponseStream()))
+                    using (StreamReader responseReader = new StreamReader(webRequestMain.GetResponse().GetResponseStream()))
                     {
 
                         string reader = responseReader.ReadToEnd();
-                        Root jsonobj = JsonConvert.DeserializeObject<Root>(reader);
+                        jsonobj = null;
+                        jsonobj = JsonConvert.DeserializeObject<Root>(reader);
                         spawnPoint = this.transform.position;
-                        Debug.Log(jsonobj.items.Count);
-                        foreach (UserSearched user in jsonobj.items)
-                        {
-                            GameObject User = Instantiate(this.UserModel, this.spawnPoint, this.transform.rotation);
-
-                            User.GetComponent<UserLogic>().Spawn(user.login);
-                            Gap += User.GetComponent<Renderer>().bounds.size.x+1;
-
-                            User.transform.position = new Vector3(spawnPoint.x + Gap, spawnPoint.y, spawnPoint.z);
-                            User.transform.SetParent(this.transform);
-                            Users.Add(User);
-                        }
+                        Debug.Log("Users: "+jsonobj.items.Count);
+                       
 
 
                     }
@@ -121,6 +129,20 @@ namespace Chess
                 {
                     return;
                 }
+            }
+            foreach (UserSearched user in jsonobj.items)
+            {
+                GameObject User = Instantiate(this.UserModel, this.spawnPoint, this.transform.rotation) as GameObject;
+
+                User.GetComponent<UserLogic>().Spawn(user.login);
+
+                Gap -= User.GetComponent<BoxCollider>().bounds.size.z + 1;
+                User.transform.position = new Vector3(spawnPoint.x + Gap, spawnPoint.y, spawnPoint.z);
+                User.transform.parent = transform;
+                User.transform.SetParent(this.transform);
+                Users.Add(User);
+
+
             }
         }
     }

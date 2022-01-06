@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Text;
 using UnityEngine;
 
 namespace Chess
@@ -24,6 +25,8 @@ namespace Chess
         public int committs;
         public String language;
         public int size;
+        public GameObject projectModel;
+        List<Committ> jsonobj;
         void Start()
         {
 
@@ -38,8 +41,22 @@ namespace Chess
         }
         public void Resize(float amount, Vector3 direction)
         {
-            this.transform.position += direction * amount / 2; // Move the object in the direction of scaling, so that the corner on ther side stays in place
-            this.transform.localScale += direction * amount; // Scale object in the specified direction 
+            if(amount < 100 )
+            {
+                this.transform.position += direction * 1 / 2; // Move the object in the direction of scaling, so that the corner on ther side stays in place
+                this.transform.localScale += direction * 1; // Scale object in the specified direction 
+            }
+            else if (amount > 100 && amount < 200)
+            {
+                this.transform.position += direction * 2 / 2; // Move the object in the direction of scaling, so that the corner on ther side stays in place
+                this.transform.localScale += direction * 2; // Scale object in the specified direction 
+            }
+            else 
+            {
+                this.transform.position += direction * 3 / 2; // Move the object in the direction of scaling, so that the corner on ther side stays in place
+                this.transform.localScale += direction * 3; // Scale object in the specified direction 
+            }
+
         }
         public void setStats(ProjectJson json, String user)
         {
@@ -51,6 +68,11 @@ namespace Chess
             {
                 webRequest.Method = "GET";
                 webRequest.UserAgent = "Anything";
+                var username = "MasterKiller1239";
+                var password = "test";
+
+                var bytes = Encoding.UTF8.GetBytes($"{username}:{password}");
+               // webRequest.Headers.Add("Authorization", $"Basic {Convert.ToBase64String(bytes)}");
                 webRequest.ServicePoint.Expect100Continue = false;
 
                 try
@@ -59,48 +81,51 @@ namespace Chess
                     {
 
                         string reader = responseReader.ReadToEnd();
-                        List<Committ> jsonobj = JsonConvert.DeserializeObject<List<Committ>>(reader);
+                        jsonobj = JsonConvert.DeserializeObject<List<Committ>>(reader);
 
-                       committs= jsonobj.Count;
-
+                        Debug.Log(jsonobj.Count);
+                        
 
                     }
 
                 }
                 catch
                 {
+                    Debug.Log("Xd");
                     return;
                 }
             }
+            Debug.Log(jsonobj.Count);
+            committs = jsonobj.Count;
             Resize(size / committs, new Vector3(0f, 1f, 0f));
             switch (language)
             {
                 case "C++":
-                    gameObject.GetComponent<Renderer>().materials[1].color = Color.red;
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.red;
                     gameObject.tag = "C++";
                     break;
                 case "C#":
-                    gameObject.GetComponent<Renderer>().materials[1].color = Color.blue;
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.blue;
                     gameObject.tag = "C#";
                     break;
                 case "Java":
-                    gameObject.GetComponent<Renderer>().materials[1].color = Color.yellow;
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.yellow;
                     gameObject.tag = "Java";
                     break;
                 case "Dart":
-                    gameObject.GetComponent<Renderer>().materials[1].color = Color.cyan;
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.cyan;
                     gameObject.tag = "Dart";
                     break;
                 case "JavaScript":
-                    gameObject.GetComponent<Renderer>().materials[1].color = Color.black;
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.black;
                     gameObject.tag = "JavaScript";
                     break;
                 case "C":
-                    gameObject.GetComponent<Renderer>().materials[1].color = Color.magenta;
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.magenta;
                     gameObject.tag = "C";
                     break;
                 default:
-                    gameObject.GetComponent<Renderer>().materials[1].color = Color.gray;
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.gray;
                     gameObject.tag = "Other";
                     break;
             }
@@ -108,36 +133,36 @@ namespace Chess
    
         public void Expose(String lan)
         {
-            if(lan==language)
+            if(lan==language ||lan=="None")
             {
                 switch (language)
                 {
                     case "C++":
-                        gameObject.GetComponent<Renderer>().materials[1].color = Color.red;
+                        projectModel.GetComponent<Renderer>().materials[1].color = Color.red;
                         break;
                     case "C#":
-                        gameObject.GetComponent<Renderer>().materials[1].color = Color.blue;
+                        projectModel.GetComponent<Renderer>().materials[1].color = Color.blue;
                         break;
                     case "Java":
-                        gameObject.GetComponent<Renderer>().materials[1].color = Color.yellow;
+                        projectModel.GetComponent<Renderer>().materials[1].color = Color.yellow;
                         break;
                     case "Dart":
-                        gameObject.GetComponent<Renderer>().materials[1].color = Color.cyan;
+                        projectModel.GetComponent<Renderer>().materials[1].color = Color.cyan;
                         break;
                     case "JavaScript":
-                        gameObject.GetComponent<Renderer>().materials[1].color = Color.black;
+                        projectModel.GetComponent<Renderer>().materials[1].color = Color.black;
                         break;
                     case "C":
-                        gameObject.GetComponent<Renderer>().materials[1].color = Color.magenta;
+                        projectModel.GetComponent<Renderer>().materials[1].color = Color.magenta;
                         break;
                     default:
-                        gameObject.GetComponent<Renderer>().materials[1].color = Color.gray;
+                        projectModel.GetComponent<Renderer>().materials[1].color = Color.gray;
                         break;
                 }
             }
             else
             {
-                gameObject.GetComponent<Renderer>().materials[1].color = Color.gray;
+                projectModel.GetComponent<Renderer>().materials[1].color = Color.gray;
             }
         }
     }

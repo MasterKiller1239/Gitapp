@@ -28,6 +28,7 @@ public class DragandDrop : MonoBehaviour
                       
                     }
                     selectedObject = hit.collider.gameObject;
+                    selectedObject.GetComponent<TooltipTrigger>().active = false;
                     Cursor.visible = false;
                 }
               
@@ -35,13 +36,11 @@ public class DragandDrop : MonoBehaviour
             else
             {
                 Vector3 position = new Vector3(Input.mousePosition.x,
-                 Input.mousePosition.y,
-                 Camera.main.WorldToScreenPoint(selectedObject.transform.position).z);
+                Input.mousePosition.y,
+                Camera.main.WorldToScreenPoint(selectedObject.transform.position).z);
                 Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(position);
                 selectedObject.transform.position = new Vector3(WorldPosition.x, 0f, WorldPosition.z);
-
-                selectedObject = null;
-                Cursor.visible = true;
+                Drop();
             }
         }
         if(selectedObject != null)
@@ -54,7 +53,13 @@ public class DragandDrop : MonoBehaviour
         }
            
     }
+    public void Drop()
+    {
 
+        selectedObject.GetComponent<TooltipTrigger>().active = true;
+        selectedObject = null;
+        Cursor.visible = true;
+    }
     private RaycastHit CastRay()
     {
         Vector3 screenMousePosFar = new Vector3(Input.mousePosition.x, 

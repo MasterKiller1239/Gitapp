@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2693355955120228467}
   - component: {fileID: 2693355955120228469}
   - component: {fileID: 2693355955120228468}
+  - component: {fileID: 3086970376287581661}
   m_Layer: 0
   m_Name: User
-  m_TagString: Untagged
+  m_TagString: drag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,6 +53,7 @@ MonoBehaviour:
   public_repos: 0
   ProjectModel: {fileID: 3056483921231934326, guid: e2859503c794dc44ab12553a4b34ccab, type: 3}
   Projects: []
+  transitionSpeed: 5
   switcher: 0
   Zswitch: 0
   Gap: 0
@@ -66,8 +68,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.1920452, y: 0.42440575, z: 2.244195}
+  m_Center: {x: -0.21413326, y: 0.10590247, z: 0.32805395}
 --- !u!54 &2693355955120228468
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -84,3 +86,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &3086970376287581661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2693355955120228465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef84082410f909341a7a897966b3f3b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: 
+  header: 
+  active: 1

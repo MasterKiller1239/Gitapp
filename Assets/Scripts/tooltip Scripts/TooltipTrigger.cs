@@ -30,6 +30,8 @@ public class TooltipTrigger : MonoBehaviour,IPointerEnterHandler,IPointerExitHan
     {
         if (active)
             TooltipSystem.Show(content, header);
+        else
+            TooltipSystem.Hide();
 
     }
         void OnMouseExit()
