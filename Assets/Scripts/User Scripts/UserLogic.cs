@@ -92,7 +92,7 @@ namespace Chess
                 var password = "test";
 
                 var bytes = Encoding.UTF8.GetBytes($"{username}:{password}");
-                //webRequest1.Headers.Add("Authorization", $"Basic {Convert.ToBase64String(bytes)}");
+                webRequest1.Headers.Add("Authorization", $"Basic {Convert.ToBase64String(bytes)}");
                 webRequest1.ServicePoint.Expect100Continue = false;
 
                 try

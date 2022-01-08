@@ -81,39 +81,45 @@ namespace Chess
                     foreach (GameObject User in Users)
                     {
 
-                        User.gameObject.transform.position = new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().followers / maxfollowers) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().public_repos / maxrepos) * Ylength);
-
+                        //User.gameObject.transform.position = new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().followers / maxfollowers) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().public_repos / maxrepos) * Ylength);
+                        User.gameObject.GetComponent<Movement>().Move(new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().followers / maxfollowers) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().public_repos / maxrepos) * Ylength));
                     }
                     for (int i = 0; i < 8; i++)
                     {
                         Xvalues[i].text = Mathf.Round(((i + 1) / 8.0f * maxfollowers)).ToString();
                         Yvalues[i].text = Mathf.Round(((i + 1) / 8.0f * maxrepos)).ToString();
+                        Yvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
+                        Xvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
                     }
                     break;
                 case 1:
                     foreach (GameObject User in Users)
                     {
 
-                        User.gameObject.transform.position = new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().followers / maxfollowers) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().numberOfAllCommits / maxCommits) * Ylength);
-
+                       // User.gameObject.transform.position = new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().followers / maxfollowers) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().numberOfAllCommits / maxCommits) * Ylength);
+                        User.gameObject.GetComponent<Movement>().Move(new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().followers / maxfollowers) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().numberOfAllCommits / maxCommits) * Ylength));
                     }
                     for (int i = 0; i < 8; i++)
                     {
                         Xvalues[i].text = Mathf.Round(((i + 1) / 8.0f * maxfollowers)).ToString();
                         Yvalues[i].text = Mathf.Round(((i + 1) / 8.0f * maxCommits)).ToString();
+                        Yvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
+                        Xvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
                     }
                     break;
                 case 2:
                     foreach (GameObject User in Users)
                     {
 
-                        User.gameObject.transform.position = new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().numberOfAllCommits / maxCommits) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().public_repos / maxrepos) * Ylength);
-
+                        //User.gameObject.transform.position = new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().numberOfAllCommits / maxCommits) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().public_repos / maxrepos) * Ylength);
+                        User.gameObject.GetComponent<Movement>().Move(new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().numberOfAllCommits / maxCommits) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().public_repos / maxrepos) * Ylength));
                     }
                     for (int i = 0; i < 8; i++)
                     {
                         Xvalues[i].text = Mathf.Round(((i + 1) / 8.0f * maxCommits)).ToString();
                         Yvalues[i].text = Mathf.Round(((i + 1) / 8.0f * maxrepos)).ToString();
+                        Yvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
+                        Xvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
                     }
                     break;
             }

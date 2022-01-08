@@ -72,7 +72,7 @@ namespace Chess
                 var password = "test";
 
                 var bytes = Encoding.UTF8.GetBytes($"{username}:{password}");
-               // webRequest.Headers.Add("Authorization", $"Basic {Convert.ToBase64String(bytes)}");
+                webRequest.Headers.Add("Authorization", $"Basic {Convert.ToBase64String(bytes)}");
                 webRequest.ServicePoint.Expect100Continue = false;
 
                 try
@@ -83,7 +83,7 @@ namespace Chess
                         string reader = responseReader.ReadToEnd();
                         jsonobj = JsonConvert.DeserializeObject<List<Committ>>(reader);
 
-                        Debug.Log(jsonobj.Count);
+                       // Debug.Log(jsonobj.Count);
                         
 
                     }
