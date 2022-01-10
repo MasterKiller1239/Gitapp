@@ -12,6 +12,7 @@ namespace Chess
     using System.Net;
     using System.Text;
     using Newtonsoft.Json;
+    [Serializable]
     public class UserLogic : MonoBehaviour
 {
 
@@ -80,9 +81,10 @@ namespace Chess
                     return;
                 }
             }
-            followers += jsonobj.followers;
-            bio = jsonobj.bio.ToString();
-            public_repos = jsonobj.public_repos;
+            this.followers += jsonobj.followers;
+            if(jsonobj.bio!=null)
+            this.bio += jsonobj.bio.ToString();
+            this.public_repos = jsonobj.public_repos;
             HttpWebRequest webRequest1 = System.Net.WebRequest.Create("https://api.github.com/users/"+user+"/repos") as HttpWebRequest;
             if (webRequest1 != null)
             {
@@ -134,6 +136,37 @@ namespace Chess
                 i++; 
                
                   //  break;
+            }
+            this.GetComponent<TooltipTrigger>().header = nick;
+            this.GetComponent<TooltipTrigger>().content = bio;
+
+
+        }
+        public void SpawnfromSaved(UserToSave user)
+        {
+            nick = user.nick;
+          
+            this.followers += user.followers;
+            if (user.bio != null)
+                this.bio += user.bio.ToString();
+            this.public_repos = user.public_repos;
+            followers = user.followers;
+            spawnPoint = this.transform.position;
+            foreach (projectsToSave project in user.projects)
+            {
+               
+
+                    GameObject proj = (GameObject)Instantiate(this.ProjectModel, this.spawnPoint, this.transform.rotation);
+
+                    proj.GetComponent<ProjectLogic>().setStatsfromSaved(project);
+                    Gap += proj.GetComponent<ProjectLogic>().projectModel.GetComponent<Renderer>().bounds.size.y / 2;
+
+                    proj.transform.position = new Vector3(spawnPoint.x, spawnPoint.y + Gap, spawnPoint.z);
+                    proj.transform.SetParent(this.transform);
+                    numberOfAllCommits += proj.GetComponent<ProjectLogic>().committs;
+                    Projects.Add(proj);
+                    Gap += proj.GetComponent<ProjectLogic>().projectModel.GetComponent<Renderer>().bounds.size.y / 2;
+            
             }
             this.GetComponent<TooltipTrigger>().header = nick;
             this.GetComponent<TooltipTrigger>().content = bio;

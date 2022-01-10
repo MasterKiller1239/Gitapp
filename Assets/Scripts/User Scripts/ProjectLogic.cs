@@ -18,6 +18,7 @@ namespace Chess
         JavaScript,
         Other
     }
+    [Serializable]
     public class ProjectLogic : MonoBehaviour
     {
         // Start is called before the first frame update
@@ -63,40 +64,41 @@ namespace Chess
 
             size = json.size;
             language = json.language;
-            HttpWebRequest webRequest = System.Net.WebRequest.Create("https://api.github.com/repos/"+user+"/"+ json.name + "/commits") as HttpWebRequest;
-            if (webRequest != null)
-            {
-                webRequest.Method = "GET";
-                webRequest.UserAgent = "Anything";
-                var username = "MasterKiller1239";
-                var password = "test";
+            //HttpWebRequest webRequest = System.Net.WebRequest.Create("https://api.github.com/repos/"+user+"/"+ json.name + "/commits") as HttpWebRequest;
+            //if (webRequest != null)
+            //{
+            //    webRequest.Method = "GET";
+            //    webRequest.UserAgent = "Anything";
+            //    var username = "MasterKiller1239";
+            //    var password = "test";
 
-                var bytes = Encoding.UTF8.GetBytes($"{username}:{password}");
-                webRequest.Headers.Add("Authorization", $"Basic {Convert.ToBase64String(bytes)}");
-                webRequest.ServicePoint.Expect100Continue = false;
+            //    var bytes = Encoding.UTF8.GetBytes($"{username}:{password}");
+            //    webRequest.Headers.Add("Authorization", $"Basic {Convert.ToBase64String(bytes)}");
+            //    webRequest.ServicePoint.Expect100Continue = false;
 
-                try
-                {
-                    using (StreamReader responseReader = new StreamReader(webRequest.GetResponse().GetResponseStream()))
-                    {
+            //    try
+            //    {
+            //        using (StreamReader responseReader = new StreamReader(webRequest.GetResponse().GetResponseStream()))
+            //        {
 
-                        string reader = responseReader.ReadToEnd();
-                        jsonobj = JsonConvert.DeserializeObject<List<Committ>>(reader);
+            //            string reader = responseReader.ReadToEnd();
+            //            jsonobj = JsonConvert.DeserializeObject<List<Committ>>(reader);
 
-                       // Debug.Log(jsonobj.Count);
-                        
+            //           // Debug.Log(jsonobj.Count);
 
-                    }
 
-                }
-                catch
-                {
-                    Debug.Log("Xd");
-                    return;
-                }
-            }
-            Debug.Log(jsonobj.Count);
-            committs = jsonobj.Count;
+            //        }
+
+            //    }
+            //    catch
+            //    {
+            //        Debug.Log("Xd");
+            //        return;
+            //    }
+            //}
+            //Debug.Log(jsonobj.Count);
+            //committs = jsonobj.Count;
+            committs = UnityEngine.Random.Range(1, 100);
             Resize(size / committs, new Vector3(0f, 1f, 0f));
             switch (language)
             {
@@ -130,7 +132,46 @@ namespace Chess
                     break;
             }
         }
-   
+        public void setStatsfromSaved(projectsToSave json)
+        {
+
+            size = json.size;
+            language = json.language;
+
+            committs = json.committs;
+            Resize(size / committs, new Vector3(0f, 1f, 0f));
+            switch (language)
+            {
+                case "C++":
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.red;
+                    gameObject.tag = "C++";
+                    break;
+                case "C#":
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.blue;
+                    gameObject.tag = "C#";
+                    break;
+                case "Java":
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.yellow;
+                    gameObject.tag = "Java";
+                    break;
+                case "Dart":
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.cyan;
+                    gameObject.tag = "Dart";
+                    break;
+                case "JavaScript":
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.black;
+                    gameObject.tag = "JavaScript";
+                    break;
+                case "C":
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.magenta;
+                    gameObject.tag = "C";
+                    break;
+                default:
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.gray;
+                    gameObject.tag = "Other";
+                    break;
+            }
+        }
         public void Expose(String lan)
         {
             if(lan==language ||lan=="None")

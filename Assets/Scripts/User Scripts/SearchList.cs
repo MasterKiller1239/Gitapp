@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using TMPro;
 using UnityEngine;
@@ -41,10 +43,11 @@ namespace Chess
         public bool incomplete_results { get; set; }
         public List<UserSearched> items { get; set; }
     }
-
+    [Serializable]
     public class SearchList : MonoBehaviour
     {
         public List<GameObject> Users = new List<GameObject>();
+        public FavouriteList savelist;
         public GameObject UserModel;
         public TMP_InputField inputField;
         Root jsonobj;
@@ -61,6 +64,20 @@ namespace Chess
         void Update()
         {
 
+        }
+       public void Save()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, this.gameObject);
+            stream.Close();
+        }
+        public void Load()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+          //  gameObject.GetComponent< SearchList >() = (SearchList)formatter.Deserialize(stream);
+            stream.Close();
         }
     
         public void RemoveFromList(int hashcode)
@@ -85,16 +102,50 @@ namespace Chess
         }
         public async void TestGet()
         {
-            var url = "https://api.github.com/search/users?q=MasterKiller1239&page=1";
+            //var url = "https://api.github.com/rate_limit";
 
-            var httpClient = new HappyHttpClient(new JsonSerializationOption());
+            //var httpClient = new HappyHttpClient(new JsonSerializationOption());
 
-            var result = await httpClient.Get<Root>(url);
-            Debug.Log(result.items.Count);
+            //var result = await httpClient.Get<string>(url);
+            //Debug.Log(result);
+             HttpWebRequest webRequestMain1 = System.Net.WebRequest.Create("https://api.github.com/rate_limit") as HttpWebRequest;
+            if (webRequestMain1 != null)
+            {
+                webRequestMain1.Method = "GET";
+                webRequestMain1.UserAgent = "Anything";
+                var username = "MasterKiller1239";
+                var password = "test";
+
+                var bytes = Encoding.UTF8.GetBytes($"{username}:{password}");
+                webRequestMain1.Headers.Add("Authorization", $"Basic {Convert.ToBase64String(bytes)}");
+                webRequestMain1.ServicePoint.Expect100Continue = false;
+
+                try
+                {
+                    using (StreamReader responseReader = new StreamReader(webRequestMain1.GetResponse().GetResponseStream()))
+                    {
+
+                        string reader = responseReader.ReadToEnd();
+
+                        var jsonobja = JsonConvert.DeserializeObject(reader);
+
+                      
+    
+
+
+                    }
+
+                }
+                catch
+                {
+                    return;
+                }
+            }
+
         }
         public void FillList()
         {
-  
+           TestGet();
             //https://api.github.com/search/users?q=Master&page=1
             webRequestMain = null;
             webRequestMain = System.Net.WebRequest.Create("https://api.github.com/search/users?q=" + inputField.text + "&per_page=1&page=1") as HttpWebRequest;
@@ -135,9 +186,9 @@ namespace Chess
                 GameObject User = Instantiate(this.UserModel, this.spawnPoint, this.transform.rotation) as GameObject;
 
                 User.GetComponent<UserLogic>().Spawn(user.login);
-
+                savelist.AddToLocalDatabase(User.GetComponent<UserLogic>());
                 Gap -= User.GetComponent<BoxCollider>().bounds.size.z + 1;
-                User.transform.position = new Vector3(spawnPoint.x + Gap, spawnPoint.y, spawnPoint.z);
+                User.transform.position = new Vector3(spawnPoint.x, spawnPoint.y, spawnPoint.z + Gap);
                 User.transform.parent = transform;
                 User.transform.SetParent(this.transform);
                 Users.Add(User);
