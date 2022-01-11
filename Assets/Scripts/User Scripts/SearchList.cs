@@ -192,7 +192,11 @@ namespace Chess
                 User.transform.parent = transform;
                 User.transform.SetParent(this.transform);
                 Users.Add(User);
-
+                if (spawnPoint.z + Gap < -5)
+                {
+                    spawnPoint.x -= User.GetComponent<BoxCollider>().bounds.size.x + 1; ;
+                    Gap = 0;
+                }
 
             }
         }

@@ -49,13 +49,13 @@ namespace Chess
             }
             else if (amount > 100 && amount < 200)
             {
-                this.transform.position += direction * 2 / 2; // Move the object in the direction of scaling, so that the corner on ther side stays in place
-                this.transform.localScale += direction * 2; // Scale object in the specified direction 
+                this.transform.position += direction * 10 / 2; // Move the object in the direction of scaling, so that the corner on ther side stays in place
+                this.transform.localScale += direction * 10; // Scale object in the specified direction 
             }
             else 
             {
-                this.transform.position += direction * 3 / 2; // Move the object in the direction of scaling, so that the corner on ther side stays in place
-                this.transform.localScale += direction * 3; // Scale object in the specified direction 
+                this.transform.position += direction * 20 / 2; // Move the object in the direction of scaling, so that the corner on ther side stays in place
+                this.transform.localScale += direction * 20; // Scale object in the specified direction 
             }
 
         }
@@ -127,7 +127,7 @@ namespace Chess
                     gameObject.tag = "C";
                     break;
                 default:
-                    projectModel.GetComponent<Renderer>().materials[1].color = Color.gray;
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.white;
                     gameObject.tag = "Other";
                     break;
             }
@@ -167,7 +167,7 @@ namespace Chess
                     gameObject.tag = "C";
                     break;
                 default:
-                    projectModel.GetComponent<Renderer>().materials[1].color = Color.gray;
+                    projectModel.GetComponent<Renderer>().materials[1].color = Color.white;
                     gameObject.tag = "Other";
                     break;
             }
@@ -197,7 +197,7 @@ namespace Chess
                         projectModel.GetComponent<Renderer>().materials[1].color = Color.magenta;
                         break;
                     default:
-                        projectModel.GetComponent<Renderer>().materials[1].color = Color.gray;
+                        projectModel.GetComponent<Renderer>().materials[1].color = Color.white;
                         break;
                 }
             }

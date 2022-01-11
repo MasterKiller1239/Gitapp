@@ -62,12 +62,17 @@ BinaryFormatter bf = new BinaryFormatter();
 
         foreach (UserToSave user in UserstoSave)
         {
-            GameObject User = Instantiate(this.UserModel, this.transform.position, this.transform.rotation) as GameObject;
+            GameObject User = Instantiate(this.UserModel, spawnPoint, this.transform.rotation) as GameObject;
 
             User.GetComponent<UserLogic>().SpawnfromSaved(user);
            
             Gap -= User.GetComponent<BoxCollider>().bounds.size.z + 1;
-            User.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + Gap);
+            User.transform.position = new Vector3(spawnPoint.x, spawnPoint.y, spawnPoint.z + Gap);
+            if(spawnPoint.z + Gap<-5)
+            {
+                spawnPoint.x += User.GetComponent<BoxCollider>().bounds.size.x + 1; ;
+                Gap = 0;
+            }
             User.transform.parent = transform;
             User.transform.SetParent(this.transform);
            

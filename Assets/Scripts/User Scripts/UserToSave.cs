@@ -30,7 +30,7 @@ namespace Chess
             nick = user.nick;
             bio = user.bio;
             numberOfAllCommits = user.numberOfAllCommits;
-            followers += user.followers;
+            followers = user.followers;
             public_repos = user.public_repos;
             foreach(GameObject project in user.Projects)
             {
