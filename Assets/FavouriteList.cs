@@ -48,6 +48,7 @@ else file = File.Create(destination);
     public void LoadFile()
     {
         string destination = Application.persistentDataPath + "/save.dat";
+        Debug.Log(destination);
         FileStream file;
 
         if (File.Exists(destination)) file = File.OpenRead(destination);
