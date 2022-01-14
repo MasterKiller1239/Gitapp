@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,23 @@ using UnityEngine.UI;
 
 namespace Chess
 {
+    public static class MathExtensions
+    {
+        public static float Round(this float i, int nearest)
+        {
+            if (nearest <= 0 || nearest % 10 != 0)
+                throw new ArgumentOutOfRangeException("nearest", "Must round to a positive multiple of 10");
+
+            return (i + 5 * nearest / 10) / nearest * nearest;
+        }
+        public static int Round(this int i, int nearest)
+        {
+            if (nearest <= 0 || nearest % 10 != 0)
+                throw new ArgumentOutOfRangeException("nearest", "Must round to a positive multiple of 10");
+
+            return (i + 5 * nearest / 10) / nearest * nearest;
+        }
+    }
     public class MainList : MonoBehaviour
     {
         // Start is called before the first frame update
@@ -70,12 +88,12 @@ namespace Chess
         {
             if (Users.Count > 0)
             {
-                maxfollowers = 1.3f * Users.Max(t => t.gameObject.GetComponent<UserLogic>().followers);
-                maxCommits = 1.1f * Users.Max(t => t.gameObject.GetComponent<UserLogic>().numberOfAllCommits);
-                maxrepos = 1.2f * Users.Max(t => t.gameObject.GetComponent<UserLogic>().public_repos);
+                maxfollowers = (int)(1.3f * Users.Max(t => t.gameObject.GetComponent<UserLogic>().followers)).Round(10);
+                maxCommits =(int)( 1.1f * Users.Max(t => t.gameObject.GetComponent<UserLogic>().numberOfAllCommits)).Round(10);
+                maxrepos = (int)(1.2f * Users.Max(t => t.gameObject.GetComponent<UserLogic>().public_repos)).Round(10);
             }
-              
-            switch(type)
+       
+            switch (type)
             {
                 case 0:
                     foreach (GameObject User in Users)
@@ -86,8 +104,8 @@ namespace Chess
                     }
                     for (int i = 0; i < 8; i++)
                     {
-                        Xvalues[i].text = Mathf.Round(((i + 1) / 8.0f * maxfollowers)).ToString();
-                        Yvalues[i].text = Mathf.Round(((i + 1) / 8.0f * maxrepos)).ToString();
+                        Xvalues[i].text = (Mathf.Round(((i + 1) / 8.0f * maxfollowers)).Round(10)).ToString();
+                        Yvalues[i].text = (Mathf.Round(((i + 1) / 8.0f * maxrepos)).Round(10)).ToString();
                         Yvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
                         Xvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
                     }

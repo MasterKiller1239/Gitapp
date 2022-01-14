@@ -51,8 +51,8 @@ public class Movement : MonoBehaviour
     }
     public void MovefromZero()
     {
-        
-        this.transform.position = new Vector3(17.3199997f, 0.129999995f, -16.9599991f);
+        this.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
+        //this.transform.position = new Vector3(17.3199997f, 0.129999995f, -16.9599991f);
         isMoving = true;
         startpoint = this.transform;
        
