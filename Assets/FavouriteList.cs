@@ -17,6 +17,7 @@ public class FavouriteList : MonoBehaviour
     void Start()
     {
         spawnPoint = this.transform.position;
+        //LoadFile();
     }
 
     // Update is called once per frame
@@ -33,7 +34,7 @@ public class FavouriteList : MonoBehaviour
     }
     public void SaveFile()
     {
-        string destination = Application.persistentDataPath + "/save.dat";
+        string destination = Application.dataPath + "/StreamingAssets" + "/save.dat";
         FileStream file;
 
         if (File.Exists(destination)) file = File.OpenWrite(destination);
@@ -47,10 +48,10 @@ else file = File.Create(destination);
 
     public void LoadFile()
     {
-        string destination = Application.persistentDataPath + "/save.dat";
-        Debug.Log(destination);
+        string destination = Application.dataPath + "/StreamingAssets" + "/save.dat";
+        Debug.Log(destination+ Application.dataPath);
         FileStream file;
-
+        
         if (File.Exists(destination)) file = File.OpenRead(destination);
         else
         {
@@ -69,7 +70,7 @@ BinaryFormatter bf = new BinaryFormatter();
            
             Gap -= User.GetComponent<BoxCollider>().bounds.size.z + 1;
             User.transform.position = new Vector3(spawnPoint.x, spawnPoint.y, spawnPoint.z + Gap);
-            if(spawnPoint.z + Gap<-5)
+            if(spawnPoint.z + Gap<-8)
             {
                 spawnPoint.x += User.GetComponent<BoxCollider>().bounds.size.x + 1; ;
                 Gap = 0;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DragandDrop : MonoBehaviour
 {
     private GameObject selectedObject;
-
+    public bool Hudworking = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +15,7 @@ public class DragandDrop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0)&&!Hudworking)
         {
             if (selectedObject == null)
             {

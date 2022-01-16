@@ -22,8 +22,9 @@ namespace Chess
     public class ProjectLogic : MonoBehaviour
     {
         // Start is called before the first frame update
-        public Color color;
+        protected Color color;
         public int committs=1;
+        public int stars = 0;
         public String language;
         public int size;
         public GameObject projectModel;
@@ -31,8 +32,9 @@ namespace Chess
         void Start()
         {
 
+            color = Color.yellow;
 
-            
+
         }
 
         // Update is called once per frame
@@ -64,6 +66,8 @@ namespace Chess
 
             size = json.size;
             language = json.language;
+            stars =json.watchers_count;
+
             HttpWebRequest webRequest = System.Net.WebRequest.Create("https://api.github.com/repos/" + user + "/" + json.name + "/commits") as HttpWebRequest;
             if (webRequest != null)
             {
@@ -100,44 +104,52 @@ namespace Chess
             committs += jsonobj.Count;
 
             //committs = UnityEngine.Random.Range(1, 100);
-            Resize(size / committs, new Vector3(0f, 1f, 0f));
+            Resize(size / (committs+1), new Vector3(0f, 1f, 0f));
             switch (language)
             {
                 case "C++":
                     projectModel.GetComponent<Renderer>().materials[1].color = Color.red;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.red;
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = Color.red;
                     gameObject.tag = "C++";
                     break;
                 case "C#":
                     projectModel.GetComponent<Renderer>().materials[1].color = Color.blue;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.blue;
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = Color.blue;
                     gameObject.tag = "C#";
                     break;
                 case "Java":
-                    projectModel.GetComponent<Renderer>().materials[1].color = Color.yellow;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    projectModel.GetComponent<Renderer>().materials[1].color = new Color(1, 0.572f, 0.078f, 1);
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = new Color(1, 0.572f, 0.078f, 1);
                     gameObject.tag = "Java";
                     break;
                 case "Dart":
                     projectModel.GetComponent<Renderer>().materials[1].color = Color.cyan;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.cyan;
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = Color.cyan;
                     gameObject.tag = "Dart";
                     break;
                 case "JavaScript":
                     projectModel.GetComponent<Renderer>().materials[1].color = Color.black;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.black;
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = Color.black;
                     gameObject.tag = "JavaScript";
                     break;
                 case "C":
                     projectModel.GetComponent<Renderer>().materials[1].color = Color.magenta;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.magenta;
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = Color.magenta;
                     gameObject.tag = "C";
                     break;
                 default:
                     projectModel.GetComponent<Renderer>().materials[1].color = Color.white;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.white;
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = Color.white;
                     gameObject.tag = "Other";
                     break;
+
             }
         }
         public void setStatsfromSaved(projectsToSave json)
@@ -145,47 +157,59 @@ namespace Chess
 
             size = json.size;
             language = json.language;
-
+            stars = json.watchers_count;
             committs += json.committs;
-            Resize(size / committs, new Vector3(0f, 1f, 0f));
+            Resize(size / (committs+1), new Vector3(0f, 1f, 0f));
+
             switch (language)
             {
                 case "C++":
                     projectModel.GetComponent<Renderer>().materials[1].color = Color.red;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.red;
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = Color.red;
                     gameObject.tag = "C++";
                     break;
                 case "C#":
                     projectModel.GetComponent<Renderer>().materials[1].color = Color.blue;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.blue;
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = Color.blue;
                     gameObject.tag = "C#";
                     break;
                 case "Java":
-                    projectModel.GetComponent<Renderer>().materials[1].color = Color.yellow;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    projectModel.GetComponent<Renderer>().materials[1].color = new Color(1, 0.572f, 0.078f, 1);
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = new Color(1, 0.572f, 0.078f, 1);
                     gameObject.tag = "Java";
                     break;
                 case "Dart":
                     projectModel.GetComponent<Renderer>().materials[1].color = Color.cyan;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.cyan;
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = Color.cyan;
                     gameObject.tag = "Dart";
                     break;
                 case "JavaScript":
                     projectModel.GetComponent<Renderer>().materials[1].color = Color.black;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.black;
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = Color.black;
                     gameObject.tag = "JavaScript";
                     break;
                 case "C":
                     projectModel.GetComponent<Renderer>().materials[1].color = Color.magenta;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.magenta;
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = Color.magenta;
                     gameObject.tag = "C";
                     break;
                 default:
                     projectModel.GetComponent<Renderer>().materials[1].color = Color.white;
-                    projectModel.GetComponent<Renderer>().materials[0].color = Color.white;
+                    if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                    else projectModel.GetComponent<Renderer>().materials[0].color = Color.white;
                     gameObject.tag = "Other";
                     break;
+
             }
+            //  Debug.Log(stars / 100.0f);
+            Debug.Log(projectModel.GetComponent<Renderer>().materials[0].color.ToString());
+          
         }
         public void Expose(String lan)
         {
@@ -195,39 +219,47 @@ namespace Chess
                 {
                     case "C++":
                         projectModel.GetComponent<Renderer>().materials[1].color = Color.red;
-                        projectModel.GetComponent<Renderer>().materials[0].color = Color.red;
+                        if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                        else projectModel.GetComponent<Renderer>().materials[0].color = Color.red;
                         gameObject.tag = "C++";
                         break;
                     case "C#":
                         projectModel.GetComponent<Renderer>().materials[1].color = Color.blue;
-                        projectModel.GetComponent<Renderer>().materials[0].color = Color.blue;
+                        if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                        else projectModel.GetComponent<Renderer>().materials[0].color = Color.blue;
                         gameObject.tag = "C#";
                         break;
                     case "Java":
-                        projectModel.GetComponent<Renderer>().materials[1].color = Color.yellow;
-                        projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                        projectModel.GetComponent<Renderer>().materials[1].color = new Color(1, 0.572f, 0.078f, 1);
+                        if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                        else projectModel.GetComponent<Renderer>().materials[0].color = new Color(1, 0.572f, 0.078f, 1);
                         gameObject.tag = "Java";
                         break;
                     case "Dart":
                         projectModel.GetComponent<Renderer>().materials[1].color = Color.cyan;
-                        projectModel.GetComponent<Renderer>().materials[0].color = Color.cyan;
+                        if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                        else projectModel.GetComponent<Renderer>().materials[0].color = Color.cyan;
                         gameObject.tag = "Dart";
                         break;
                     case "JavaScript":
                         projectModel.GetComponent<Renderer>().materials[1].color = Color.black;
-                        projectModel.GetComponent<Renderer>().materials[0].color = Color.black;
+                        if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                        else projectModel.GetComponent<Renderer>().materials[0].color = Color.black;
                         gameObject.tag = "JavaScript";
                         break;
                     case "C":
                         projectModel.GetComponent<Renderer>().materials[1].color = Color.magenta;
-                        projectModel.GetComponent<Renderer>().materials[0].color = Color.magenta;
+                        if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                        else projectModel.GetComponent<Renderer>().materials[0].color = Color.magenta;
                         gameObject.tag = "C";
                         break;
                     default:
                         projectModel.GetComponent<Renderer>().materials[1].color = Color.white;
-                        projectModel.GetComponent<Renderer>().materials[0].color = Color.white;
+                        if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].color = Color.yellow;
+                        else projectModel.GetComponent<Renderer>().materials[0].color = Color.white;
                         gameObject.tag = "Other";
                         break;
+
                 }
             }
             else

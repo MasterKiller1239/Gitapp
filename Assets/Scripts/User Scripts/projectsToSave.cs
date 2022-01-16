@@ -10,6 +10,7 @@ namespace Chess
         public int committs;
         public string language;
         public int size;
+        public int watchers_count;
         // Start is called before the first frame update
         void Start()
         {
@@ -26,6 +27,7 @@ namespace Chess
             committs = project.committs;
             language = project.language;
             size = project.size;
+            watchers_count = project.stars;
         }
     }
 }

@@ -50,6 +50,7 @@ namespace Chess
         public FavouriteList savelist;
         public GameObject UserModel;
         public TMP_InputField inputField;
+        public MainList board;
         Root jsonobj;
         HttpWebRequest webRequestMain;
         public Vector3 spawnPoint;
@@ -65,6 +66,7 @@ namespace Chess
         {
 
         }
+
        public void Save()
         {
             IFormatter formatter = new BinaryFormatter();
@@ -199,6 +201,7 @@ namespace Chess
                 }
 
             }
+            board.DropdownValueChanged();
         }
     }
 }

@@ -43,6 +43,7 @@ namespace Chess
         public TMP_Dropdown m_Dropdown;
         public int type = 0;
         public TMP_Dropdown m_Dropdown2;
+        public GameObject tooltip;
         void Start()
         {
             Xlength = Xmax.position.x - Startpoint.position.x;
@@ -53,16 +54,27 @@ namespace Chess
             m_Dropdown2.onValueChanged.AddListener(delegate {
                 DropdownValueChanged2();
             });
-
+        
         }
 
         // Update is called once per frame
         void Update()
         {
+            if (m_Dropdown.IsExpanded || m_Dropdown2.IsExpanded)
+            {
+                this.gameObject.GetComponent<DragandDrop>().Hudworking = true;
+                tooltip.SetActive(false);
+
+            }
+            else
+            {
+                this.gameObject.GetComponent<DragandDrop>().Hudworking = false;
+                tooltip.SetActive(true);
+            }
 
         }
 
-        void DropdownValueChanged()
+       public void DropdownValueChanged()
         {
             ProjectLogic[] ALLProjects = GameObject.FindObjectsOfType<ProjectLogic>();
             foreach(ProjectLogic project in ALLProjects)
