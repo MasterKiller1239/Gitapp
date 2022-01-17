@@ -126,12 +126,13 @@ namespace Chess
 
                     proj.GetComponent<ProjectLogic>().setStats(project, user);
                     Gap += proj.GetComponent<ProjectLogic>().projectModel.GetComponent<Renderer>().bounds.size.y / 2;
-
+                   
                     proj.transform.position = new Vector3(spawnPoint.x, spawnPoint.y + Gap, spawnPoint.z);
                     proj.transform.SetParent(this.transform);
                     numberOfAllCommits += proj.GetComponent<ProjectLogic>().committs;
                     Projects.Add(proj);
                     Gap += proj.GetComponent<ProjectLogic>().projectModel.GetComponent<Renderer>().bounds.size.y / 2;
+                    this.GetComponent<BoxCollider>().size = new Vector3(this.GetComponent<BoxCollider>().size.x, this.GetComponent<BoxCollider>().size.y + Gap / 13, this.GetComponent<BoxCollider>().size.z);
                 }
                 i++; 
                
@@ -160,13 +161,13 @@ namespace Chess
 
                     proj.GetComponent<ProjectLogic>().setStatsfromSaved(project);
                     Gap += proj.GetComponent<ProjectLogic>().projectModel.GetComponent<Renderer>().bounds.size.y / 2;
-
-                    proj.transform.position = new Vector3(spawnPoint.x, spawnPoint.y + Gap, spawnPoint.z);
+             
+                proj.transform.position = new Vector3(spawnPoint.x, spawnPoint.y + Gap, spawnPoint.z);
                     proj.transform.SetParent(this.transform);
                     numberOfAllCommits += proj.GetComponent<ProjectLogic>().committs;
                     Projects.Add(proj);
                     Gap += proj.GetComponent<ProjectLogic>().projectModel.GetComponent<Renderer>().bounds.size.y / 2;
-            
+                this.GetComponent<BoxCollider>().size = new Vector3(this.GetComponent<BoxCollider>().size.x, this.GetComponent<BoxCollider>().size.y + Gap/ 13, this.GetComponent<BoxCollider>().size.z);
             }
             this.GetComponent<TooltipTrigger>().header = nick;
             this.GetComponent<TooltipTrigger>().content = bio;
