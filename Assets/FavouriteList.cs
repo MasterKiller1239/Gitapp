@@ -13,11 +13,13 @@ public class FavouriteList : MonoBehaviour
     public Vector3 spawnPoint;
     public GameObject UserModel;
     public float Gap;
+    public bool Load = false;
     // Start is called before the first frame update
     void Start()
     {
         spawnPoint = this.transform.position;
-        //LoadFile();
+        if(Load)
+        LoadFile();
     }
 
     // Update is called once per frame
