@@ -366,3 +366,740 @@ Received Import Request.
 Start importing Assets/Scenes/Test2.unity using Guid(1631633c611567b47800734a63ef2dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c508705f0b75ccff99642cbea0d4be9') in 0.007183 seconds
   Import took 0.012603 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 2345.427194 seconds.
+  path: Assets/Prefabs/User.prefab
+  artifactKey: Guid(f6b5d3ab39f3ffa42b6ee8a825f76d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/User.prefab using Guid(f6b5d3ab39f3ffa42b6ee8a825f76d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9501aa9ada842b4314dccea0e267ca8') in 0.015635 seconds
+  Import took 0.021800 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001653 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.042 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.5 MB.
+System memory in use after: 119.7 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3071.
+Total: 2.480800 ms (FindLiveObjects: 0.292100 ms CreateObjectMapping: 0.130200 ms MarkObjects: 1.984700 ms  DeleteObjects: 0.072900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002009 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.101 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.5 MB.
+System memory in use after: 119.7 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3074.
+Total: 3.002000 ms (FindLiveObjects: 0.508700 ms CreateObjectMapping: 0.242800 ms MarkObjects: 2.173200 ms  DeleteObjects: 0.075000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001687 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.069 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.5 MB.
+System memory in use after: 119.7 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3077.
+Total: 3.137800 ms (FindLiveObjects: 0.480000 ms CreateObjectMapping: 0.191400 ms MarkObjects: 2.382800 ms  DeleteObjects: 0.081900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001622 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.951 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.5 MB.
+System memory in use after: 119.7 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3080.
+Total: 3.941200 ms (FindLiveObjects: 0.732700 ms CreateObjectMapping: 0.327500 ms MarkObjects: 2.768500 ms  DeleteObjects: 0.110000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1013.203570 seconds.
+  path: Assets/LeanTween/Examples/Models/2dText.fbx
+  artifactKey: Guid(c0f35ff1d23074af5bcd82d9caa31ebe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/2dText.fbx using Guid(c0f35ff1d23074af5bcd82d9caa31ebe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2c96f6b82e16181a84050364b7636e4') in 0.290833 seconds
+  Import took 0.298561 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001526 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.953 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.8 MB.
+System memory in use after: 119.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3122.
+Total: 2.495700 ms (FindLiveObjects: 0.353800 ms CreateObjectMapping: 0.130200 ms MarkObjects: 1.958100 ms  DeleteObjects: 0.052900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.952525 seconds.
+  path: Assets/Prefabs/mainMenu/saveButton (2).prefab
+  artifactKey: Guid(df93f8c5eb6468e4e9a4a94b2eb2ba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/mainMenu/saveButton (2).prefab using Guid(df93f8c5eb6468e4e9a4a94b2eb2ba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e4d4029825ffea6f4a3bb62f5b1d655') in 0.097343 seconds
+  Import took 0.102489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.430111 seconds.
+  path: Assets/Scenes/Sandbox.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Sandbox.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e502af97e26f87449bebb96dc8d81cc') in 0.008698 seconds
+  Import took 0.014622 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001580 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.942 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.9 MB.
+System memory in use after: 120.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3125.
+Total: 3.548800 ms (FindLiveObjects: 0.378400 ms CreateObjectMapping: 0.234000 ms MarkObjects: 2.832800 ms  DeleteObjects: 0.102500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.413431 seconds.
+  path: Assets/Prefabs/mainMenu/saveButton (2).prefab
+  artifactKey: Guid(df93f8c5eb6468e4e9a4a94b2eb2ba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/mainMenu/saveButton (2).prefab using Guid(df93f8c5eb6468e4e9a4a94b2eb2ba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '420dfaef8b56f4fc8da7f8808db50ea4') in 0.085042 seconds
+  Import took 0.091472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.263528 seconds.
+  path: Assets/Prefabs/mainMenu/saveButton (2).prefab
+  artifactKey: Guid(df93f8c5eb6468e4e9a4a94b2eb2ba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/mainMenu/saveButton (2).prefab using Guid(df93f8c5eb6468e4e9a4a94b2eb2ba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '657e9dcc2d472edfc447009d4fb5c51f') in 0.023857 seconds
+  Import took 0.030593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.274418 seconds.
+  path: Assets/Prefabs/mainMenu/saveButton (2).prefab
+  artifactKey: Guid(df93f8c5eb6468e4e9a4a94b2eb2ba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/mainMenu/saveButton (2).prefab using Guid(df93f8c5eb6468e4e9a4a94b2eb2ba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2de76cb48d632f8600f411a52eae75d7') in 0.029142 seconds
+  Import took 0.035376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.679917 seconds.
+  path: Assets/Scenes/Test1.unity
+  artifactKey: Guid(a9c7dc8238766c9469bba9cfecd56904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Test1.unity using Guid(a9c7dc8238766c9469bba9cfecd56904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4a811683b3b260c7edb2c9ccf0a4b1a') in 0.004428 seconds
+  Import took 0.010954 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002000 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.976 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.9 MB.
+System memory in use after: 120.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3128.
+Total: 2.614000 ms (FindLiveObjects: 0.286500 ms CreateObjectMapping: 0.164100 ms MarkObjects: 2.100700 ms  DeleteObjects: 0.061600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.180771 seconds.
+  path: Assets/Prefabs/mainMenu/saveButton (2).prefab
+  artifactKey: Guid(df93f8c5eb6468e4e9a4a94b2eb2ba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/mainMenu/saveButton (2).prefab using Guid(df93f8c5eb6468e4e9a4a94b2eb2ba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39edad8b86c580ab6028cf6bff40ad00') in 0.085947 seconds
+  Import took 0.091569 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002134 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.968 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.9 MB.
+System memory in use after: 120.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3131.
+Total: 2.477100 ms (FindLiveObjects: 0.360100 ms CreateObjectMapping: 0.153600 ms MarkObjects: 1.873800 ms  DeleteObjects: 0.088600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001434 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.969 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.9 MB.
+System memory in use after: 120.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3134.
+Total: 2.429900 ms (FindLiveObjects: 0.313600 ms CreateObjectMapping: 0.129700 ms MarkObjects: 1.917800 ms  DeleteObjects: 0.067700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 384.228937 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites
+  artifactKey: Guid(4cd3c06e52cd44709b7fb4d481297206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites using Guid(4cd3c06e52cd44709b7fb4d481297206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc25c4fc976ae34dac7222b8593910fb') in 0.013273 seconds
+  Import took 0.020289 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.429313 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/256
+  artifactKey: Guid(bdb7697094297400a9e098ddefb435c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/256 using Guid(bdb7697094297400a9e098ddefb435c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '825c0827c6cd420059e3fed7b78052a6') in 0.006857 seconds
+  Import took 0.013114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.756343 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32
+  artifactKey: Guid(c67409647bbf74b2f8ac495e54977b07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32 using Guid(c67409647bbf74b2f8ac495e54977b07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80eadc5d89230f0c853817799350f83e') in 0.008140 seconds
+  Import took 0.012872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.075074 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-h01-32.png
+  artifactKey: Guid(93aef0c90c6cc4bbab4421badf861df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-h01-32.png using Guid(93aef0c90c6cc4bbab4421badf861df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c636b6f87d38a32c5c7c39e5abe15d3c') in 0.127907 seconds
+  Import took 0.134456 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-v04-32.png
+  artifactKey: Guid(8081a4a26568a44e1b6de046105e8188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-v04-32.png using Guid(8081a4a26568a44e1b6de046105e8188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e02bbed1af3dc3ae8197b23dc4000c6') in 0.012723 seconds
+  Import took 0.018473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-h05-32.png
+  artifactKey: Guid(bfbaefbec9ed04885b76ffaa15a933e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-h05-32.png using Guid(bfbaefbec9ed04885b76ffaa15a933e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8221fd7e440f3c8ad07603cf05ea293') in 0.016974 seconds
+  Import took 0.022794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-h04-32.png
+  artifactKey: Guid(454c55a74b2c74e71ac0203f9067246e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-h04-32.png using Guid(454c55a74b2c74e71ac0203f9067246e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbcfae8e9c9e566076b5091f42353851') in 0.019280 seconds
+  Import took 0.025016 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-v08-32.png
+  artifactKey: Guid(45048d317d2394ae0a86c7160a575d57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-v08-32.png using Guid(45048d317d2394ae0a86c7160a575d57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ca3db93cd73f39b5600955f3b2586b1') in 0.015423 seconds
+  Import took 0.021008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-v06-32.png
+  artifactKey: Guid(280bd645831694209b878e9d2a459980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-v06-32.png using Guid(280bd645831694209b878e9d2a459980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4f97c558d9b4921f646c7ed653ae1a2') in 0.014266 seconds
+  Import took 0.019092 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-h06-32.png
+  artifactKey: Guid(29020ed6bce8e40a8b90fb3b1c80e0ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-h06-32.png using Guid(29020ed6bce8e40a8b90fb3b1c80e0ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb92d23d46766c883ecaf22476b099e7') in 0.011627 seconds
+  Import took 0.016127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-v02-32.png
+  artifactKey: Guid(aa2bf4ff4e72f4a309712aacbef29cf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-v02-32.png using Guid(aa2bf4ff4e72f4a309712aacbef29cf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e41c35ef71ebd79c41c6f60fac7112a5') in 0.013359 seconds
+  Import took 0.020276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-h02-32.png
+  artifactKey: Guid(03f57f72dfb6b483f815eb01d3c00bc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-h02-32.png using Guid(03f57f72dfb6b483f815eb01d3c00bc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cbfc02cdeba7defcf04429ad79a6418') in 0.021141 seconds
+  Import took 0.026027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-v03-32.png
+  artifactKey: Guid(fcca382af04f4416aac8c8fd8f23f332) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-v03-32.png using Guid(fcca382af04f4416aac8c8fd8f23f332) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2ead7202fdebf607da548a5dcd89370') in 0.011836 seconds
+  Import took 0.016465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-h03-32.png
+  artifactKey: Guid(3c21a5469e05b44c7a29fb775828d79a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-h03-32.png using Guid(3c21a5469e05b44c7a29fb775828d79a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb2358dfb33b91f2595bb7e48c6ef244') in 0.013066 seconds
+  Import took 0.018135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-v05-32.png
+  artifactKey: Guid(4e277331f42f8490e80fc95e6ba54841) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-v05-32.png using Guid(4e277331f42f8490e80fc95e6ba54841) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd8e4e6405c1201df42498074f713018') in 0.020612 seconds
+  Import took 0.025858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-v01-32.png
+  artifactKey: Guid(791080409b7c143d0be77e2f23abb32e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-v01-32.png using Guid(791080409b7c143d0be77e2f23abb32e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e28bcaef25b6b50bf58bed669d90212') in 0.014666 seconds
+  Import took 0.019602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-v07-32.png
+  artifactKey: Guid(409e2a3fb01c04e8d9fec63015886353) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-v07-32.png using Guid(409e2a3fb01c04e8d9fec63015886353) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17f49664e3f6e2a5b3b8cb49ee888b4e') in 0.014516 seconds
+  Import took 0.020362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-h07-32.png
+  artifactKey: Guid(53d50050f211947698105e9ca118393a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-h07-32.png using Guid(53d50050f211947698105e9ca118393a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee23070da870d54814bd0163f3fa9669') in 0.013863 seconds
+  Import took 0.019065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000543 seconds.
+  path: Assets/Free Poker Chip Icons/Sprites/32/spin-h08-32.png
+  artifactKey: Guid(4ae23b3af6fd84ee1b3c3f4dd4561572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Sprites/32/spin-h08-32.png using Guid(4ae23b3af6fd84ee1b3c3f4dd4561572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '374f421f1b26ca9217eefddf35d8fbd4') in 0.017681 seconds
+  Import took 0.023145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.821469 seconds.
+  path: Assets/Free Poker Chip Icons/Chips
+  artifactKey: Guid(e27a84a0b040845c7a97289226c23d72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Chips using Guid(e27a84a0b040845c7a97289226c23d72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd75e995b5405eb6e67e671caffc87be3') in 0.007834 seconds
+  Import took 0.012325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.489102 seconds.
+  path: Assets/Free Poker Chip Icons/Packs
+  artifactKey: Guid(2ff0c622fc5504c4892dee6dd1b5f240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs using Guid(2ff0c622fc5504c4892dee6dd1b5f240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79c814505a7fe4010012a0ccbf99fbef') in 0.007482 seconds
+  Import took 0.013684 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.044635 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128
+  artifactKey: Guid(39f70ffee35614e3bbb161f3774fab8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128 using Guid(39f70ffee35614e3bbb161f3774fab8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e11a94701f447639103ae59d77a57089') in 0.007956 seconds
+  Import took 0.011954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.069254 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack01-purse1-128.png
+  artifactKey: Guid(48e5790501df4475dbdec546d09a7840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack01-purse1-128.png using Guid(48e5790501df4475dbdec546d09a7840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59ed76c3d1c05e674368c36b47a7cb49') in 0.015517 seconds
+  Import took 0.020152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack06-vault3-128.png
+  artifactKey: Guid(04db3aa36c7d54cf8aa502143c92c9a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack06-vault3-128.png using Guid(04db3aa36c7d54cf8aa502143c92c9a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ef709f28e3c8fbd8bc4f3461fbd3fa1') in 0.018843 seconds
+  Import took 0.023703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack02-bag2-128.png
+  artifactKey: Guid(0a1b4097541ad42e7a2ba3e89f394c15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack02-bag2-128.png using Guid(0a1b4097541ad42e7a2ba3e89f394c15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a58701f3a2591aa37747094496797b2') in 0.017520 seconds
+  Import took 0.024266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack04-suitcase2-128.png
+  artifactKey: Guid(94c1537d9d8964db3891c537c482b7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack04-suitcase2-128.png using Guid(94c1537d9d8964db3891c537c482b7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '740932b6fcf05eb1e369de93c1a9046e') in 0.013532 seconds
+  Import took 0.018819 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack03-bag3-128.png
+  artifactKey: Guid(803bd91df7ff44b79afe6353221d07e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack03-bag3-128.png using Guid(803bd91df7ff44b79afe6353221d07e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f29bfafdf5552b89c7b5f4f0dbc44be') in 0.017312 seconds
+  Import took 0.021651 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack03-bag2-128.png
+  artifactKey: Guid(fa8f232e6d48547edb2daccfdde1abb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack03-bag2-128.png using Guid(fa8f232e6d48547edb2daccfdde1abb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cacd38a997fae2b83d0f3d42d2b034bc') in 0.014735 seconds
+  Import took 0.019995 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack04-suitcase1-128.png
+  artifactKey: Guid(17eaa5715bc3b4819b5f7d2dcf2329cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack04-suitcase1-128.png using Guid(17eaa5715bc3b4819b5f7d2dcf2329cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef82dcd053b0b67ea9b13ad000fe3dbd') in 0.014445 seconds
+  Import took 0.019779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack01-purse3-128.png
+  artifactKey: Guid(12b0edc2c2e694a858794bdab48d59d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack01-purse3-128.png using Guid(12b0edc2c2e694a858794bdab48d59d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70e4b5e179b650c2f90a2ceb8979899d') in 0.016094 seconds
+  Import took 0.020755 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack03-bag1-128.png
+  artifactKey: Guid(848e66e1047b64e98a382efcf58e615a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack03-bag1-128.png using Guid(848e66e1047b64e98a382efcf58e615a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72682206c3a6f7d6e784019002b88296') in 0.014102 seconds
+  Import took 0.018987 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack05-chest2-128.png
+  artifactKey: Guid(963f8996d50bb41088638659f3f0774e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack05-chest2-128.png using Guid(963f8996d50bb41088638659f3f0774e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6381b944f08e8d31d234308903e62ad') in 0.014874 seconds
+  Import took 0.021228 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack05-chest1-128.png
+  artifactKey: Guid(a7730dce5d48e4ce5b09f3fd14ee19b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack05-chest1-128.png using Guid(a7730dce5d48e4ce5b09f3fd14ee19b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35a8645953dfa43971ae18717f70100e') in 0.016494 seconds
+  Import took 0.021880 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack02-bag1-128.png
+  artifactKey: Guid(cff30092e30e14fb588f38e1fa1de9af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack02-bag1-128.png using Guid(cff30092e30e14fb588f38e1fa1de9af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '797da038209bdd18636107de2ba34aab') in 0.014671 seconds
+  Import took 0.019714 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack04-suitcase3-128.png
+  artifactKey: Guid(b3b883ea46e354d079e4f0ed4d6ee767) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack04-suitcase3-128.png using Guid(b3b883ea46e354d079e4f0ed4d6ee767) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5802fadcf1efc34d957a6f1223f0327') in 0.017366 seconds
+  Import took 0.022670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack06-vault1-128.png
+  artifactKey: Guid(d7df9f561f0264ca1a76cfa11fe05b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack06-vault1-128.png using Guid(d7df9f561f0264ca1a76cfa11fe05b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ace649e1b66f91d0c07862118aa54b4') in 0.015096 seconds
+  Import took 0.020357 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack01-purse2-128.png
+  artifactKey: Guid(38970c8d153bf41a3a9151e719118b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack01-purse2-128.png using Guid(38970c8d153bf41a3a9151e719118b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd02a773c8f89c256c3ca42dec6ee4739') in 0.015397 seconds
+  Import took 0.019806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack05-chest3-128.png
+  artifactKey: Guid(6c968c86a52234c0a837eb5ad92711e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack05-chest3-128.png using Guid(6c968c86a52234c0a837eb5ad92711e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f294bc88d9563561500d1e21672e115') in 0.019369 seconds
+  Import took 0.023270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack02-bag3-128.png
+  artifactKey: Guid(3f291b4b847464268bd485cae76e805f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack02-bag3-128.png using Guid(3f291b4b847464268bd485cae76e805f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1254f0c3b49d9246458b193c7edd9aa8') in 0.014775 seconds
+  Import took 0.019310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/128/pack06-vault2-128.png
+  artifactKey: Guid(1a62098483e6c41d682815af73fa6c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/128/pack06-vault2-128.png using Guid(1a62098483e6c41d682815af73fa6c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fbd3ac3599e4a17c19b7b4feab1a4fd') in 0.014671 seconds
+  Import took 0.019444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.254753 seconds.
+  path: Assets/Free Poker Chip Icons/Packs/256
+  artifactKey: Guid(dffa00cc6fef544b38d5bdbf13c6cc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Packs/256 using Guid(dffa00cc6fef544b38d5bdbf13c6cc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b4e3e60e2182fee6fa3874af041eddd') in 0.002709 seconds
+  Import took 0.007785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.562361 seconds.
+  path: Assets/Free Poker Chip Icons/Chips/64
+  artifactKey: Guid(dedbd8c454a7648bcbe58f82626d7b1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Chips/64 using Guid(dedbd8c454a7648bcbe58f82626d7b1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bff8d016ad53cf7aac2864a8dc0fe5e') in 0.007365 seconds
+  Import took 0.013322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.055080 seconds.
+  path: Assets/Free Poker Chip Icons/Chips/64/coin-1-64.png
+  artifactKey: Guid(2cbc1ca3b9c644ed3af12ca62317389b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Chips/64/coin-1-64.png using Guid(2cbc1ca3b9c644ed3af12ca62317389b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0dd6e7a6bcb0180f9254648a5cacf92') in 0.013792 seconds
+  Import took 0.018753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Free Poker Chip Icons/Chips/64/coin-3-64.png
+  artifactKey: Guid(ef29cb7f17a3746cd96a7bc38dc72e23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Chips/64/coin-3-64.png using Guid(ef29cb7f17a3746cd96a7bc38dc72e23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21ada3ed99b7423343a645af1f9ea92a') in 0.013043 seconds
+  Import took 0.017614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Free Poker Chip Icons/Chips/64/coin-5-64.png
+  artifactKey: Guid(376345f11724743d9af6f67eed7ab043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Chips/64/coin-5-64.png using Guid(376345f11724743d9af6f67eed7ab043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44f4618f14a033a14a0b1a2ab37b05ee') in 0.012077 seconds
+  Import took 0.017172 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Free Poker Chip Icons/Chips/64/coin-2-64.png
+  artifactKey: Guid(1ee309c03bbd24ad59515b7a3d55da07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Chips/64/coin-2-64.png using Guid(1ee309c03bbd24ad59515b7a3d55da07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49c368ce2da646035eb39152f8909600') in 0.013537 seconds
+  Import took 0.019955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/Free Poker Chip Icons/Chips/64/coin-4-64.png
+  artifactKey: Guid(09a782388745747e48d9c5d916dd7b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Chips/64/coin-4-64.png using Guid(09a782388745747e48d9c5d916dd7b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e3c7de170210d9edb024cdbfa962a6c') in 0.013287 seconds
+  Import took 0.018115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.551329 seconds.
+  path: Assets/Free Poker Chip Icons/Chips/256
+  artifactKey: Guid(2677923753442406e82a1e90c825701a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Chips/256 using Guid(2677923753442406e82a1e90c825701a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfd7284ab3524f27bdb4a87d43c8627b') in 0.003028 seconds
+  Import took 0.009073 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.051115 seconds.
+  path: Assets/Free Poker Chip Icons/Chips/256/coin-1-256.png
+  artifactKey: Guid(7c7ecd6a511a841658e96b2daba5a271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Chips/256/coin-1-256.png using Guid(7c7ecd6a511a841658e96b2daba5a271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95d19522d23e71931f31e708d52f1270') in 0.019821 seconds
+  Import took 0.024665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/Free Poker Chip Icons/Chips/256/coin-4-256.png
+  artifactKey: Guid(501851bf1f5d54a30af2f97b832d435a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Chips/256/coin-4-256.png using Guid(501851bf1f5d54a30af2f97b832d435a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e5fbffe85fc6d65f4334cc99a84d201') in 0.016166 seconds
+  Import took 0.020710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Free Poker Chip Icons/Chips/256/coin-2-256.png
+  artifactKey: Guid(bd54b376b4b7c4d0d8ba877d587a82af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Chips/256/coin-2-256.png using Guid(bd54b376b4b7c4d0d8ba877d587a82af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7113af1e352b95bc1d221dd1ee88f8a') in 0.023919 seconds
+  Import took 0.030488 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/Free Poker Chip Icons/Chips/256/coin-5-256.png
+  artifactKey: Guid(aec96af2914c247458456d8ade95efe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Chips/256/coin-5-256.png using Guid(aec96af2914c247458456d8ade95efe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2ea1a3cc4ed98ba808a90de183a4708') in 0.018346 seconds
+  Import took 0.022716 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/Free Poker Chip Icons/Chips/256/coin-3-256.png
+  artifactKey: Guid(183e7a06bcfa54fcf9546479601c7a7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Poker Chip Icons/Chips/256/coin-3-256.png using Guid(183e7a06bcfa54fcf9546479601c7a7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec47f42ca21bff301f1e1a0353269932') in 0.022747 seconds
+  Import took 0.027860 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001523 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.121 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.8 MB.
+System memory in use after: 120.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3144.
+Total: 3.601900 ms (FindLiveObjects: 0.452300 ms CreateObjectMapping: 0.167800 ms MarkObjects: 2.894200 ms  DeleteObjects: 0.085700 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

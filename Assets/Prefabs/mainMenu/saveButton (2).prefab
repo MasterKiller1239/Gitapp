@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 560f50555c9601e4e90992aaef262656, type: 2}
   m_sharedMaterial: {fileID: 1081842585246242521, guid: 560f50555c9601e4e90992aaef262656, type: 2}
@@ -256,9 +256,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: FavouriteList, Assembly-CSharp
-        m_MethodName: SaveFile
+      - m_Target: {fileID: 2653375496114774785}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -280,4 +280,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9094cf988e95f4bbfe224e6a540703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playLevel: Level1

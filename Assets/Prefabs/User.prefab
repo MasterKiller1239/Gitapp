@@ -116,4 +116,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpoint: {fileID: 0}
   endpoint: {x: 0, y: 0, z: 0}
-  movementSpeed: 15
+  movementSpeed: 25

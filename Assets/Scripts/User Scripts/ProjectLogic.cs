@@ -105,6 +105,8 @@ namespace Chess
 
             //committs = UnityEngine.Random.Range(1, 100);
             Resize(size / (committs+1), new Vector3(0f, 1f, 0f));
+            if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].SetFloat("Smoothness", 1.0f);
+            else projectModel.GetComponent<Renderer>().materials[0].SetFloat("Smoothness", 0.0f);
             switch (language)
             {
                 case "C++":
@@ -160,7 +162,8 @@ namespace Chess
             stars = json.watchers_count;
             committs += json.committs;
             Resize(size / (committs+1), new Vector3(0f, 1f, 0f));
-
+            if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].SetFloat("Smoothness", 1.0f);
+            else projectModel.GetComponent<Renderer>().materials[0].SetFloat("Smoothness", 0.0f);
             switch (language)
             {
                 case "C++":
@@ -215,6 +218,8 @@ namespace Chess
         {
             if(lan==language ||lan=="None")
             {
+                if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].SetFloat("Smoothness", 1.0f);
+                else projectModel.GetComponent<Renderer>().materials[0].SetFloat("Smoothness", 0.0f);
                 switch (language)
                 {
                     case "C++":
