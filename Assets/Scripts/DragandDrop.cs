@@ -1,3 +1,4 @@
+using Chess;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class DragandDrop : MonoBehaviour
 {
     private GameObject selectedObject;
+    public MainList List;
     public bool Hudworking = false;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,8 @@ public class DragandDrop : MonoBehaviour
                       
                     }
                     selectedObject = hit.collider.gameObject;
+                    List.Remove(selectedObject);
+                    selectedObject.GetComponent<Collider>().enabled = false;
                     selectedObject.GetComponent<TooltipTrigger>().active = false;
                     Cursor.visible = false;
                 }
@@ -40,6 +44,7 @@ public class DragandDrop : MonoBehaviour
                 Camera.main.WorldToScreenPoint(selectedObject.transform.position).z);
                 Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(position);
                 selectedObject.transform.position = new Vector3(WorldPosition.x, 0f, WorldPosition.z);
+              
                 Drop();
             }
         }
@@ -55,10 +60,12 @@ public class DragandDrop : MonoBehaviour
     }
     public void Drop()
     {
-
+        //  selectedObject.GetComponent<Collider>().enabled = true;
+        selectedObject.GetComponent<Collider>().enabled = true;
         selectedObject.GetComponent<TooltipTrigger>().active = true;
-        selectedObject = null;
+
         Cursor.visible = true;
+        selectedObject = null;
     }
     private RaycastHit CastRay()
     {

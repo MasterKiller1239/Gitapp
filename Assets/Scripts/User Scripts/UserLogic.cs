@@ -9,6 +9,7 @@ using UnityEngine;
 namespace Chess
 {
     using System.IO;
+    using System.Linq;
     using System.Net;
     using System.Text;
     using Newtonsoft.Json;
@@ -22,6 +23,7 @@ namespace Chess
         public int numberOfAllCommits = 1;
         public int followers =1;
         public int public_repos = 1;
+      
 
         public GameObject ProjectModel;
         protected Vector3 spawnPoint;
@@ -139,7 +141,9 @@ namespace Chess
                   //  break;
             }
             this.GetComponent<TooltipTrigger>().header = nick;
-            this.GetComponent<TooltipTrigger>().content = bio;
+
+            this.GetComponent<TooltipTrigger>().content = "C++: "+ Projects.Where(a => a.GetComponent<ProjectLogic>().language=="C++").Count()+ " C#: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C#").Count() + " Java: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "Java").Count() +
+                " Dart: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "Dart").Count() + " JavaScript: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "JavaScript").Count() + " C: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C").Count() + " All: " + public_repos ;
 
 
         }
@@ -170,7 +174,9 @@ namespace Chess
                 this.GetComponent<BoxCollider>().size = new Vector3(this.GetComponent<BoxCollider>().size.x, this.GetComponent<BoxCollider>().size.y + Gap/ 13, this.GetComponent<BoxCollider>().size.z);
             }
             this.GetComponent<TooltipTrigger>().header = nick;
-            this.GetComponent<TooltipTrigger>().content = bio;
+            this.GetComponent<TooltipTrigger>().content = "C++: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C++").Count() + " C#: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C#").Count() + " Java: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "Java").Count() +
+               " Dart: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "Dart").Count() + " JavaScript: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "JavaScript").Count() + " C: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C").Count() + " All: " + public_repos;
+
 
 
         }

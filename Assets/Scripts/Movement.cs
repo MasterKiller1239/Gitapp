@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
     bool isMoving = false;
     public Transform startpoint;
     public Vector3 endpoint;
+    public bool isDragged = false;
   
     // Settings
     public float movementSpeed = 5;

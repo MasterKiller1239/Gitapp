@@ -39,6 +39,8 @@ namespace Chess
         public List<GameObject> Users = new List<GameObject>();
         public List<TMP_Text> Xvalues = new List<TMP_Text>();
         public List<TMP_Text> Yvalues = new List<TMP_Text>();
+        public TMP_Text YAxe;
+        public TMP_Text XAxe;
         public SearchList searchList;
         public TMP_Dropdown m_Dropdown;
         public int type = 0;
@@ -94,6 +96,25 @@ namespace Chess
            
            if(Users.Count>0)
             updatePositions();
+            else
+            {
+                switch(type)
+                {
+                    case 0:
+                        YAxe.text = "No.Repos";
+                        XAxe.text = "Follows";
+                        break;
+                    case 1:
+                        YAxe.text = "Commits";
+                        XAxe.text = "Follows";
+                        break;
+                    case 2:
+                        YAxe.text = "No.Repos";
+                        XAxe.text = "Commits";
+                        break;
+
+                }
+            }
 
         }
         public void updatePositions()
@@ -114,13 +135,31 @@ namespace Chess
                         //User.gameObject.transform.position = new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().followers / maxfollowers) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().public_repos / maxrepos) * Ylength);
                         User.gameObject.GetComponent<Movement>().Move(new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().followers / maxfollowers) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().public_repos / maxrepos) * Ylength));
                     }
-                    for (int i = 0; i < 8; i++)
+                    
+                    for (int i = 0; i < 16; i++)
                     {
-                        Xvalues[i].text = (Mathf.Round(((i + 1) / 8.0f * maxfollowers)).Round(10)).ToString();
-                        Yvalues[i].text = (Mathf.Round(((i + 1) / 8.0f * maxrepos)).Round(10)).ToString();
+                        if (i % 2 == 0)
+                        {
+                            if (maxfollowers < 100)
+                                Xvalues[i].gameObject.SetActive(false);
+                            else
+                                Xvalues[i].gameObject.SetActive(true);
+
+                            if (maxrepos < 100)
+                                Yvalues[i].gameObject.SetActive(false);
+                            else
+                                Yvalues[i].gameObject.SetActive(true);
+                        }
+
+                        Xvalues[i].text = (Mathf.Round(((i + 1) / 16.0f * maxfollowers)).Round(10)).ToString();
+                        Yvalues[i].text = (Mathf.Round(((i + 1) / 16.0f * maxrepos)).Round(10)).ToString();
+
                         Yvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
                         Xvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
                     }
+                   
+                    YAxe.text = "No.Repos";
+                    XAxe.text = "Follows";
                     break;
                 case 1:
                     foreach (GameObject User in Users)
@@ -129,13 +168,27 @@ namespace Chess
                        // User.gameObject.transform.position = new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().followers / maxfollowers) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().numberOfAllCommits / maxCommits) * Ylength);
                         User.gameObject.GetComponent<Movement>().Move(new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().followers / maxfollowers) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().numberOfAllCommits / maxCommits) * Ylength));
                     }
-                    for (int i = 0; i < 8; i++)
+                    for (int i = 0; i < 16; i++)
                     {
-                        Xvalues[i].text = Mathf.Round(((i + 1) / 8.0f * maxfollowers)).ToString();
-                        Yvalues[i].text = Mathf.Round(((i + 1) / 8.0f * maxCommits)).ToString();
+                        if (i % 2 == 0)
+                        {
+                            if (maxfollowers < 100)
+                                Xvalues[i].gameObject.SetActive(false);
+                            else
+                                Xvalues[i].gameObject.SetActive(true);
+
+                            if (maxCommits < 100)
+                                Yvalues[i].gameObject.SetActive(false);
+                            else
+                                Yvalues[i].gameObject.SetActive(true);
+                        }
+                        Xvalues[i].text = Mathf.Round(((i + 1) / 16.0f * maxfollowers)).ToString();
+                        Yvalues[i].text = Mathf.Round(((i + 1) / 16.0f * maxCommits)).ToString();
                         Yvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
                         Xvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
                     }
+                    YAxe.text = "Commits";
+                    XAxe.text = "Follows";
                     break;
                 case 2:
                     foreach (GameObject User in Users)
@@ -144,39 +197,61 @@ namespace Chess
                         //User.gameObject.transform.position = new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().numberOfAllCommits / maxCommits) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().public_repos / maxrepos) * Ylength);
                         User.gameObject.GetComponent<Movement>().Move(new Vector3(Startpoint.position.x + (User.GetComponent<UserLogic>().numberOfAllCommits / maxCommits) * Xlength, Startpoint.position.y, Startpoint.position.z + (User.GetComponent<UserLogic>().public_repos / maxrepos) * Ylength));
                     }
-                    for (int i = 0; i < 8; i++)
+                    for (int i = 0; i < 16; i++)
                     {
-                        Xvalues[i].text = Mathf.Round(((i + 1) / 8.0f * maxCommits)).ToString();
-                        Yvalues[i].text = Mathf.Round(((i + 1) / 8.0f * maxrepos)).ToString();
+                        if (i % 2 == 0)
+                        {
+                            if ( maxCommits < 100)
+                            Xvalues[i].gameObject.SetActive(false);
+                        else
+                        Xvalues[i].gameObject.SetActive(true);
+
+                    if ( maxrepos < 100)
+                        Yvalues[i].gameObject.SetActive(false);
+                    else
+                        Yvalues[i].gameObject.SetActive(true);
+            }
+                      
+                        Xvalues[i].text = Mathf.Round(((i + 1) / 16.0f * maxCommits)).ToString();
+                        Yvalues[i].text = Mathf.Round(((i + 1) / 16.0f * maxrepos)).ToString();
                         Yvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
                         Xvalues[i].gameObject.GetComponent<Movement>().MovefromZero();
                     }
+                    YAxe.text = "No.Repos";
+                    XAxe.text = "Commits";
                     break;
             }
            
         }
+
+       
         private void OnCollisionEnter(Collision collision)
         {
-           
-           
-            if (collision.gameObject.tag == "drag")
+
+
+            if (collision.gameObject.tag == "drag" )
             {
                     Users.Add(collision.gameObject);
-                this.GetComponent<DragandDrop>().Drop();
+               // this.GetComponent<DragandDrop>().Drop();
                     // searchList.RemoveFromList(collision.gameObject.GetHashCode());
                     updatePositions();
                 }
         }
-        private void OnCollisionExit(Collision collision)
+        public void Remove(GameObject item)
         {
-            if (collision.gameObject.tag == "drag")
-            {
-                Users.Remove(collision.gameObject);
-                // searchList.RemoveFromList(collision.gameObject.GetHashCode());
-                updatePositions();
-            }
-          
+          if(Users.Remove(item))
+           updatePositions();
         }
+        //private void OnCollisionExit(Collision collision)
+        //{
+        //    if (collision.gameObject.tag == "drag")
+        //    {
+        //        Users.Remove(collision.gameObject);
+        //        // searchList.RemoveFromList(collision.gameObject.GetHashCode());
+        //        updatePositions();
+        //    }
+          
+        //}
     }
 }
 
