@@ -140,11 +140,15 @@ namespace Chess
                
                   //  break;
             }
+            int a = Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C++").Count();
+            int b = Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C#").Count();
+            int c = Projects.Where(a => a.GetComponent<ProjectLogic>().language == "Java").Count();
+            int d = Projects.Where(a => a.GetComponent<ProjectLogic>().language == "Dart").Count();
+            int e = Projects.Where(a => a.GetComponent<ProjectLogic>().language == "JavaScript").Count();
+            int f = Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C").Count();
             this.GetComponent<TooltipTrigger>().header = nick;
-
-            this.GetComponent<TooltipTrigger>().content = "C++: "+ Projects.Where(a => a.GetComponent<ProjectLogic>().language=="C++").Count()+ " C#: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C#").Count() + " Java: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "Java").Count() +
-                " Dart: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "Dart").Count() + " JavaScript: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "JavaScript").Count() + " C: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C").Count() + " All: " + public_repos ;
-
+            this.GetComponent<TooltipTrigger>().content = "Last 10 projects \n C++: " + a + " C#: " + b + " Java: " + c +
+               " Dart: " + d + " JavaScript: " + e + " C: " + f + " Other: " + (10 - a - b - c - d - e - f);
 
         }
         public void SpawnfromSaved(UserToSave user)
@@ -171,11 +175,17 @@ namespace Chess
                     numberOfAllCommits += proj.GetComponent<ProjectLogic>().committs;
                     Projects.Add(proj);
                     Gap += proj.GetComponent<ProjectLogic>().projectModel.GetComponent<Renderer>().bounds.size.y / 2;
-                this.GetComponent<BoxCollider>().size = new Vector3(this.GetComponent<BoxCollider>().size.x, this.GetComponent<BoxCollider>().size.y + Gap/ 13, this.GetComponent<BoxCollider>().size.z);
+                this.GetComponent<BoxCollider>().size = new Vector3(this.GetComponent<BoxCollider>().size.x, this.GetComponent<BoxCollider>().size.y + Gap/ 22, this.GetComponent<BoxCollider>().size.z);
             }
+            int a = Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C++").Count();
+            int b = Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C#").Count();
+            int c = Projects.Where(a => a.GetComponent<ProjectLogic>().language == "Java").Count();
+            int d = Projects.Where(a => a.GetComponent<ProjectLogic>().language == "Dart").Count();
+            int e = Projects.Where(a => a.GetComponent<ProjectLogic>().language == "JavaScript").Count();
+            int f = Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C").Count();
             this.GetComponent<TooltipTrigger>().header = nick;
-            this.GetComponent<TooltipTrigger>().content = "C++: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C++").Count() + " C#: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C#").Count() + " Java: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "Java").Count() +
-               " Dart: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "Dart").Count() + " JavaScript: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "JavaScript").Count() + " C: " + Projects.Where(a => a.GetComponent<ProjectLogic>().language == "C").Count() + " All: " + public_repos;
+            this.GetComponent<TooltipTrigger>().content = "Last 10 projects \n C++: " + a + " C#: " +b + " Java: " +  c+
+               " Dart: " + d + " JavaScript: " + e + " C: " + f  + " Other: " + (10-a-b-c-d-e-f);
 
 
 

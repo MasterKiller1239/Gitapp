@@ -62,6 +62,7 @@ namespace Chess
         // Update is called once per frame
         void Update()
         {
+           
             if (m_Dropdown.IsExpanded || m_Dropdown2.IsExpanded)
             {
                 this.gameObject.GetComponent<DragandDrop>().Hudworking = true;

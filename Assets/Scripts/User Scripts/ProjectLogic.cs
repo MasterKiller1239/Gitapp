@@ -216,7 +216,7 @@ namespace Chess
         }
         public void Expose(String lan)
         {
-            if(lan==language ||lan=="None")
+            if(lan==language ||lan== "Any Language" ||this.gameObject.tag== lan)
             {
                 if (stars > 100) projectModel.GetComponent<Renderer>().materials[0].SetFloat("Smoothness", 1.0f);
                 else projectModel.GetComponent<Renderer>().materials[0].SetFloat("Smoothness", 0.0f);
